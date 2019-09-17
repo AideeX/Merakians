@@ -70,7 +70,11 @@ if(isset($_POST['submit'])) {
     </head>
     <body>
       <div class="page-container">
-          <img class="signup-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
+          <div class ="img-container two">
+
+              <img class="signup-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
+              <img class="img" src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
+          </div>
           <div class="form-container">
               <div class="forms">
                   <form class="sign-up-form" action="#" method="post">
@@ -130,7 +134,7 @@ if(isset($_POST['submit'])) {
             <div class ="img-container">
 
             <img class="logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
-                <img src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
+                <img class="img" src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
             </div>
         </div>
         <script src="js/script.js"></script>
