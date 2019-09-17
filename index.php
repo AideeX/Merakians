@@ -75,7 +75,6 @@ if(isset($_POST['submit'])) {
     <body>
       <div class="page-container">
           <div class="form-container">
-              <img class="logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
               <form action="#" method="post">
                  <?php
                  if (isset($error))
@@ -83,7 +82,8 @@ if(isset($_POST['submit'])) {
                     echo $error;
                  }
                  ?>
-                  <h1>Sign in to Merakians</h1>
+
+                  <h1 class="title">Sign in to Merakians</h1>
                   <div class="social-icons">
                       <a href="#" class="social"><i class="socicon-facebook"></i></a>
                       <a href="#" class="social"><i class="socicon-google"></i></a>
@@ -92,7 +92,7 @@ if(isset($_POST['submit'])) {
                     <input type="email" name="email" placeholder="Enter Email">
                     <input type="password" name="password" placeholder="Enter Password">
                     <a class="help" href="#">Forgot password?</a>
-                    <input type="submit" name="submit" value="Login">
+                    <input class="sub-btn" type="submit" name="submit" value="Login">
                     <p> Don't have an account? <a class="link" href="#">Signup</a></p>
                     <?php
                     if(isset($message))
@@ -104,6 +104,8 @@ if(isset($_POST['submit'])) {
               </form>
           </div>
             <div class ="img-container">
+            
+            <img class="logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
                 <img src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
             </div>
         </div>
