@@ -14,15 +14,15 @@ a:hover{
 }
 
 .page-container{
-    margin: 0px;
-    border: 1px solid transparent;
-    padding: 0px;
     display: flex;
     width: 100%;
     height: 100%;
-    font-family: arial;
-    min-height: 100vh;
+    font-family: arial, sans-serif;
+    max-height: 100vh;
+    max-width: 100%;
     flex-wrap: wrap;
+    background: url("https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg")  no-repeat;
+    background-size: 50% 100%;
 }
 .form-container{
     border: 1px solid transparent;
@@ -30,24 +30,28 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     background-color: #60c0f9;
-    min-height: 100vh;
     align-items: center;
     padding: 20px;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    transition: all .3s;
+    overflow: hidden;
 }
 .img-container{
     border: 1px solid transparent;
     width: 50%;
-    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 form.login{
-display: block;
 border: 1px solid transparent;
 display: flex;
 flex-direction: column;
 }
 .title{
 text-align: center;
-font-family: Arial;
+    font-family: Arial, sans-serif;
 color: #00045b;
 font-size: 30px;
 font-weight: bold;
@@ -67,12 +71,29 @@ margin-bottom: 80px;
     top: 20px;
     right: 20px;
     z-index: 2;
+    opacity: 1;
+    transition: all .3s;
 }
+
+.signup-logo{
+    border-radius: 50%;
+    /* border: 1px transparent; */
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    opacity: 0;
+    transition: all .3s;
+}
+
 .social-icons{
 display: flex;
 justify-content: space-between;
 max-width: 120px;
 width: 100%;
+    margin-bottom: 20px;
 }
 
 .social-icons i{
@@ -116,6 +137,10 @@ input{
 }
 .socicon-facebook{
     background: #3b5998;
+    color: white;
+}
+.socicon-twitter{
+    background: #1DA1F2;
     color: white;
 }
 .socicon-google{
@@ -182,4 +207,32 @@ form {
         height: 100%;
         width: 100%;
         object-fit: contain;
+    }
+    .signup .form-container{
+        left: 50%;
+    }
+    .forms{
+        display: flex;
+    }
+
+    .forms form{
+        width: 50vw;
+        transform: translateX(-100%);
+        transition: all .3s;
+    }
+
+    .signup .forms form{
+        transform: translateX(0);
+    }
+
+    .signup .signup-logo{
+        opacity: 1;
+    }
+
+    .signup .logo{
+        opacity: 0;
+    }
+
+    .sign-up-form .social-icons{
+        max-width: 220px;
     }

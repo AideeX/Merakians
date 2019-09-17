@@ -43,14 +43,10 @@ if(isset($_POST['submit'])) {
       }
       else 
       {
-
         $error = "JSON File not found";
       }
 
    }
-
-
-
 
 }
 
@@ -74,15 +70,43 @@ if(isset($_POST['submit'])) {
     </head>
     <body>
       <div class="page-container">
+          <img class="signup-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
           <div class="form-container">
-              <form action="#" method="post">
+              <div class="forms">
+                  <form class="sign-up-form" action="#" method="post">
+                      <?php
+                      if (isset($error))
+                      {
+                          echo $error;
+                      }
+                      ?>
+                      <h1 class="title">Create your account</h1>
+                      <div class="social-icons">
+                          <a href="#" class="social"><i class="socicon-facebook"></i></a>
+                          <a href="#" class="social"><i class="socicon-twitter"></i></a>
+                          <a href="#" class="social"><i class="socicon-google"></i></a>
+                      </div>
+                      <input type="username" name="username" placeholder="Enter username">
+                      <input type="email" name="email" placeholder="Enter Email">
+                      <input type="password" name="password" placeholder="Enter Password">
+                      <input type="verify-password" name="verify-password" placeholder="Verify password">
+                      <input class="sub-btn" type="submit" name="submit" value="Signup">
+                      <!--<a class="help" href="#">Forgot password?</a>-->
+                      <p> Already have an account? <a class="link sign-in-link" href="#">Login</a></p>
+                      <?php
+                      if(isset($message))
+                      {
+                          echo $message;
+                      }
+                      ?>
+                  </form>
+              <form class="sign-in-form" action="#" method="post">
                  <?php
                  if (isset($error))
                  {
                     echo $error;
                  }
                  ?>
-
                   <h1 class="title">Sign in to Merakians</h1>
                   <div class="social-icons">
                       <a href="#" class="social"><i class="socicon-facebook"></i></a>
@@ -93,18 +117,18 @@ if(isset($_POST['submit'])) {
                     <input type="password" name="password" placeholder="Enter Password">
                     <a class="help" href="#">Forgot password?</a>
                     <input class="sub-btn" type="submit" name="submit" value="Login">
-                    <p> Don't have an account? <a class="link" href="#">Signup</a></p>
+                    <p> Don't have an account? <a class="link sign-up-link" href="#">Signup</a></p>
                     <?php
                     if(isset($message))
                     {
-
                       echo $message;
                     }
                     ?>
               </form>
           </div>
+          </div>
             <div class ="img-container">
-            
+
             <img class="logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
                 <img src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
             </div>
