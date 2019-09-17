@@ -85,6 +85,15 @@ margin-bottom: 80px;
     opacity: 1;
     transition: all .3s;
 }
+.mobile-logo{
+    border-radius: 50%;
+    /* border: 1px transparent; */
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    margin-bottom: 10px;
+    display: none;
+}
 
 .signup-logo{
     border-radius: 50%;
@@ -252,3 +261,32 @@ form {
     .signup .img-container.two{
         opacity: 1;
     }
+
+@media (max-width: 959px) {
+    .img-container{
+        display: none;
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+
+    .page-container{
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .form-container{
+        width: 90%;
+        height: 90vh;
+    }
+
+    .forms form{
+        width: 90vw;
+    }
+    .mobile-logo{
+        display: block;
+    }
+    .signup .form-container{
+        left: 0;
+    }
+}

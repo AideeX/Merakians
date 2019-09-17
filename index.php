@@ -71,7 +71,6 @@ if(isset($_POST['submit'])) {
     <body>
       <div class="page-container">
           <div class ="img-container two">
-
               <img class="signup-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
               <img class="img" src="https://res.cloudinary.com/dv7ogqceo/image/upload/v1568661274/Merakians/img_20190916_081757_608.jpg" alt="Merakians Image Login" >
           </div>
@@ -84,6 +83,7 @@ if(isset($_POST['submit'])) {
                           echo $error;
                       }
                       ?>
+                      <img class="mobile-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
                       <h1 class="title">Create your account</h1>
                       <div class="social-icons">
                           <a href="#" class="social"><i class="socicon-facebook"></i></a>
@@ -111,6 +111,7 @@ if(isset($_POST['submit'])) {
                     echo $error;
                  }
                  ?>
+                  <img class="mobile-logo" src="https://res.cloudinary.com/aidee/image/upload/v1568650275/Merakians/Grp_logo_qkrk0u.png" alt="team logo">
                   <h1 class="title">Sign in to Merakians</h1>
                   <div class="social-icons">
                       <a href="#" class="social"><i class="socicon-facebook"></i></a>
