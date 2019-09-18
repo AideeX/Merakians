@@ -1,9 +1,6 @@
 <?php
-    include 'index.html';
-?>
-<?php
-   // define variables for the login\\
-   $email = $password = "";
+   $email = $_POST['email'];
+   $password = $_POST['password'];
   if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $email = test_input($_POST["email"]);
   $password = test_input($_POST["password"]);
@@ -14,7 +11,7 @@
       $data = htmlspecialchars($data);
       return $data;
       }                 
-            echo "<h1>Sign in to Merakians</h1>"
+            echo "<p>Or login with your email</p>"
             echo $email;
             echo "<br>";
             echo $password;
@@ -23,7 +20,7 @@
 //define error variables\\
 $emailErr = $passwordErr ="";
 if($_SERVER["REQUEST_METHOD"] =="POST"){
-    if (empty($_POST["name"])){
+    if (empty($_POST["email"])){
         $emailErr = "Email is Required";
     }
     else {
@@ -32,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] =="POST"){
 }
 
 if($_SERVER["REQUEST_METHOD"] =="POST"){
-    if (empty($_POST["name"])){
+    if (empty($_POST["password"])){
         $passwordErr = "Password is Required";
     }
     else {
@@ -40,5 +37,3 @@ if($_SERVER["REQUEST_METHOD"] =="POST"){
     }
 }
 ?>
-
-
